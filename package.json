@@ -1,0 +1,17 @@
+{
+  "name": "directive-photoswipe",
+  "version": "0.0.1",
+  "main": "dist/directive-photoswipe.umd.js",
+  "module": "src/index.js",
+  "unpkg": "dist/directive-photoswipe.min.js",
+  "style": "dist/directive-photoswipe.css",
+  "scripts": {
+    "build": "vue build --target lib --name directive-photoswipe ./src/index.js"
+  },
+  "devDependencies": {
+    "@vue/cli": "^3.0.0-rc.3"
+  },
+  "dependencies": {
+    "photoswipe": "^4.1.2"
+  }
+}
