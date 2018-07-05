@@ -4,6 +4,11 @@
   "main": "dist/directive-photoswipe.umd.js",
   "module": "src/index.js",
   "unpkg": "dist/directive-photoswipe.min.js",
+  "keywords": [
+    "vue--directive",
+    "vue-photoswipe",
+    "directive-photoswipe"
+  ],
   "scripts": {
     "build": "vue build --target lib --name directive-photoswipe ./src/index.js"
   },
