@@ -9,7 +9,6 @@ export function install (Vue, Options = {loop: true}) {
   const pswpElement = window.document.querySelector('#pswp') || createPSWP()
   Vue.directive('photoswipe', {
     bind(el) {
-      console.log('bind');
       add(el, [...el.querySelectorAll('img')]);
       const options = {};
       // TODO 合并指令配置
@@ -26,20 +25,16 @@ export function install (Vue, Options = {loop: true}) {
     },
     inserted(el) {
       set(el);
-      console.log('inserted');
     },
     update(el) {
       set(el);
-      console.log('update');
     },
     componentUpdated(el) {
       set(el);
-      console.log('componentUpdated');
     },
     unbind(el) {
       remove(el);
       el.removeEventListener('click');
-      console.log('unbind');
     }
   })
 }

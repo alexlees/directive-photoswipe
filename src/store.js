@@ -2,6 +2,7 @@ const store = [];
 let INDEXES = 0;
 const indexAttributeName = 'data-index';
 const imgAttributeName = 'data-img';
+const imgDataSrcAttributeName = 'data-src';
 function getImgItems(el) {
   return [...el.querySelectorAll('img')].map((img) => {
     const id = `${img.src}+${Math.random()}`;
@@ -9,7 +10,7 @@ function getImgItems(el) {
     img.setAttribute(imgAttributeName, id);
     return {
       id,
-      src: img.src,
+      src: img.src || img.getAttribute(imgDataSrcAttributeName),
       w,
       h: img.height * (w / img.width)
     }
