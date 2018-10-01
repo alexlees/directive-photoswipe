@@ -1,6 +1,6 @@
 {
   "name": "directive-photoswipe",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "dist/directive-photoswipe.umd.js",
   "module": "src/index.js",
   "unpkg": "dist/directive-photoswipe.min.js",
