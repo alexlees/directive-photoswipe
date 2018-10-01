@@ -13,18 +13,31 @@
 ***
 
 0. 下载
+
 ```bash
-npm install directive-photoswipe | yarn add directive-photoswipe
+npm install directive-photoswipe
 ```
+
+或者
+
+```bash
+yarn add directive-photoswipe
+```
+
 1. 引入
+
 ```javascript
 import DirectivePhotoswipe from 'directive-photoswipe'
 ```
+
 2. 注册
+
 ```javascript
 Vue.use(DirectivePhotoswipe)
 ```
+
 3. 使用
+
 ```html
 <!-- 只需要在容器中使用 v-photoswipe指令即可 -->
 <!-- 点击容器内图片就会弹出图片画廊 -->
@@ -36,7 +49,22 @@ Vue.use(DirectivePhotoswipe)
 
 ***
 
+#### ChangeLog
+
+1. 增加TypeScript支持。
+2. 增加全局配置参数。
+
+#### 全局配置参数
+
+> 全局配置参数请参考[photoswipe](http://photoswipe.com/documentation/options.html)，默认loop(true)
+
+```javascript
+import DirectivePhotoswipe from 'directive-photoswipe'
+<!-- 默认loop(true) -->
+Vue.use(DirectivePhotoswipe, options)
+```
 #### CDN
+
 ```html
 <!-- 引入文件 -->
 <script src="https://unpkg.com/directive-photoswipe/dist/directive-photoswipe.umd.min.js"></script>
