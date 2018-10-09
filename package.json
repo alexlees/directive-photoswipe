@@ -1,10 +1,14 @@
 {
   "name": "directive-photoswipe",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "dist/directive-photoswipe.umd.js",
   "module": "src/index.js",
   "unpkg": "dist/directive-photoswipe.min.js",
   "typings": "types/index.d.ts",
+  "author": {
+    "name": "alexlees",
+    "url": "https://github.com/alexlees"
+  },
   "files": [
     "src",
     "dist",
@@ -31,5 +35,9 @@
     "css": {
       "extract": false
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexlees/directive-photoswipe"
   }
 }
