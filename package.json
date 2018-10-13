@@ -1,9 +1,9 @@
 {
   "name": "directive-photoswipe",
   "description": "A Vue directive for photoswipe.",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "main": "dist/directive-photoswipe.umd.js",
-  "module": "src/index.js",
+  "module": "dist/directive-photoswipe.esm.js",
   "unpkg": "dist/directive-photoswipe.min.js",
   "typings": "types/index.d.ts",
   "author": {
@@ -14,12 +14,15 @@
     "src",
     "dist",
     "test",
-    "types"
+    "types",
+    "build"
   ],
   "keywords": [
-    "vue--directive",
+    "vue-directive",
     "vue-photoswipe",
-    "directive-photoswipe"
+    "directive-photoswipe",
+    "v-photoswipe",
+    "photoswipe"
   ],
   "scripts": {
     "lint:init": "tslint --init",
@@ -31,6 +34,9 @@
   },
   "devDependencies": {
     "rollup": "^0.66.6",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-typescript": "^1.0.0",
     "tslib": "^1.9.3",
     "tslint": "^5.11.0",
@@ -38,7 +44,8 @@
   },
   "dependencies": {
     "@types/photoswipe": "^4.0.28",
-    "photoswipe": "^4.1.2"
+    "photoswipe": "^4.1.2",
+    "vue": "^2.5.17"
   },
   "repository": {
     "type": "git",
