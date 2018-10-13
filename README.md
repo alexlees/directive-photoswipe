@@ -1,11 +1,13 @@
 # directive-photoswipe
 
 > 开箱即用的photoswipe指令
+
 ## 特点
 
-> 零配置开箱即用
+> 零配置开箱即用、适合Markdown
 
-## [预览](https://alexlees.github.io/topic/5b3053665c8f1ea723a569ea)
+## [预览](https://alexlees.top/topic/5b3053665c8f1ea723a569ea)
+
 > 请在移动端查看
 
 ## 使用方式
@@ -56,19 +58,25 @@ Vue.use(DirectivePhotoswipe)
 
 #### 全局配置参数
 
-> 全局配置参数请参考[photoswipe](http://photoswipe.com/documentation/options.html)，默认loop(true)
+> 全局配置参数请参考[photoswipe](http://photoswipe.com/documentation/options.html)
 
 ```javascript
 import DirectivePhotoswipe from 'directive-photoswipe'
-<!-- 默认loop(true) -->
+
 Vue.use(DirectivePhotoswipe, options)
 ```
+
 #### CDN
 
 ```html
 <!-- 引入文件 -->
-<script src="https://unpkg.com/directive-photoswipe/dist/directive-photoswipe.umd.min.js"></script>
+<script src="https://unpkg.com/directive-photoswipe/dist/directive-photoswipe.min.js"></script>
 ```
 #### TODO
 
-- [] 配置参数
+- [x] 配置参数
+
+#### Notice
+
+1. 请勿嵌套使用v-photoswipe指令
+2. DirectivePhotoSwipe使用id为pswp的元素展示PhotoSwipe,请勿占用该ID

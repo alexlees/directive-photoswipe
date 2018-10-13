@@ -1,4 +1,7 @@
 export function createPSWP () {
+  if (document.getElementById('pswp')) {
+    console.error('DirectivePhotoSwipe 使用id为pswp的元素展示PhotoSwipe,请勿占用该ID')
+  }
   const el = window.document.createElement('div')
   el.id = 'pswp'
   el.tabIndex = -1
