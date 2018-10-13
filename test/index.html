@@ -5,16 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Test</title>
-  <link rel="stylesheet" href="../dist/directive-photoswipe.css">
 </head>
 <body>
-  <div id="app" >
+  <div id="app">
+    <h3>第一组</h3>
     <div v-photoswipe>
       <img src="https://farm4.staticflickr.com/3894/15008518202_b016d7d289_m.jpg" alt="">
     </div>
+    <h3>第二组</h3>
     <div v-photoswipe>
       <img src="https://farm6.staticflickr.com/5591/15008867125_68a8ed88cc_m.jpg" alt="">
     </div>
+    <h3>第三组</h3>
     <div v-photoswipe>
       <img src="https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg" width="100%" alt="">
       <img src="https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg" width="100%" alt="">
@@ -23,8 +25,9 @@
       <img src="https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg" width="100%" alt="">
     </div>
   </div>
+  <div id="pswp"></div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="../dist/directive-photoswipe.umd.min.js"></script>
+  <script src="../dist/directive-photoswipe.min.js"></script>
   <script>
     new Vue({
       el: '#app'
