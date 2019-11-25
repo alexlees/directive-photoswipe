@@ -6,9 +6,11 @@
 
 > 零配置开箱即用、适合Markdown
 
-## [预览](https://mcnode.alexlees.top/topic/5b3053665c8f1ea723a569ea)
+## [预览](https://github.com/alexlees/directive-photoswipe/blob/master/index.html)
 
 > 请在移动端查看
+
+### [demo](https://github.com/alexlees/directive-photoswipe/blob/master/index.html)
 
 ## 使用方式
 

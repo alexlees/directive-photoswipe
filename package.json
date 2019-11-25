@@ -1,7 +1,7 @@
 {
   "name": "directive-photoswipe",
   "description": "A Vue directive for photoswipe.",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "dist/directive-photoswipe.umd.js",
   "module": "dist/directive-photoswipe.esm.js",
   "unpkg": "dist/directive-photoswipe.min.js",
