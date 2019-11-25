@@ -1,11 +1,28 @@
-import { Item } from 'photoswipe';
+import { Item } from "photoswipe";
 interface ImgaeItem extends Item {
   id?: number;
 }
 class Store {
   private index = 0;
   private items: ImgaeItem[][] = [];
-  private readonly INDEX_ATTR = 'data-index';
+  private readonly INDEX_ATTR = "data-index";
+  public init(el: Element) {
+    this.setIndexAttr(el, this.index++);
+  }
+  public update(el: Element) {
+    console.log("update");
+    this.setItem(el);
+  }
+  public getItems(el: Element) {
+    return this.items[this.getIndexAttr(el)] || [];
+  }
+  public destroy(el: Element) {
+    this.removeItem(el);
+  }
+  public getImageIndex(root: Element, img: HTMLImageElement) {
+
+    return this.getItems(root).findIndex((item) => item.id === this.getIndexAttr(img));
+  }
   private setIndexAttr(el: Element, value: string | number) {
     el.setAttribute(this.INDEX_ATTR, `${value}`);
   }
@@ -36,12 +53,12 @@ class Store {
     if (index !== -1) {
       this.items[index] = this.elementMapToItems(el);
     } else {
-      console.error('setItem fail');
+      console.error("setItem fail");
     }
     this.showItems();
   }
   private elementMapToItems(el: Element) {
-    const imgs: HTMLImageElement[] = Array.prototype.slice.call(el.querySelectorAll('img'));
+    const imgs: HTMLImageElement[] = Array.prototype.slice.call(el.querySelectorAll("img"));
     return imgs.map((img, index) => {
       this.setIndexAttr(img, index);
       return {
@@ -61,23 +78,6 @@ class Store {
   }
   private showItems() {
     console.log(this.items);
-  }
-  public init(el: Element) {
-    this.setIndexAttr(el, this.index++);
-  }
-  public update(el: Element) {
-    console.log('update');
-    this.setItem(el);
-  }
-  public getItems(el: Element) {
-    return this.items[this.getIndexAttr(el)] || [];
-  }
-  public destroy(el: Element) {
-    this.removeItem(el);
-  }
-  public getImageIndex(root: Element, img: HTMLImageElement) {
-
-    return this.getItems(root).findIndex((item) => item.id === this.getIndexAttr(img));
   }
 }
 

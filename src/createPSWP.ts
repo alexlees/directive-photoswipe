@@ -1,13 +1,13 @@
-export function createPSWP () {
-  if (document.getElementById('pswp')) {
-    console.error('DirectivePhotoSwipe 使用id为pswp的元素展示PhotoSwipe,请勿占用该ID')
+export function createPSWP() {
+  if (document.getElementById("pswp")) {
+    console.error("DirectivePhotoSwipe 使用id为pswp的元素展示PhotoSwipe,请勿占用该ID");
   }
-  const el = window.document.createElement('div')
-  el.id = 'pswp'
-  el.tabIndex = -1
-  el.setAttribute('role', 'dialog')
-  el.classList.add('pswp')
-  el.setAttribute('aria-hidden', 'true')
+  const el = window.document.createElement("div");
+  el.id = "pswp";
+  el.tabIndex = -1;
+  el.setAttribute("role", "dialog");
+  el.classList.add("pswp");
+  el.setAttribute("aria-hidden", "true");
   el.innerHTML = `<div class="pswp__bg"></div>
   <div class="pswp__scroll-wrap">
     <div class="pswp__container">
@@ -41,7 +41,7 @@ export function createPSWP () {
             <div class="pswp__caption__center"></div>
         </div>
       </div>
-    </div>`
-  window.document.body.appendChild(el)
-  return el
+    </div>`;
+  window.document.body.appendChild(el);
+  return el;
 }

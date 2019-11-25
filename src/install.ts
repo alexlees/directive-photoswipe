@@ -1,26 +1,26 @@
-import { PluginObject, VueConstructor } from 'vue';
-import PhotoSwipe, {Options} from 'photoswipe';
-import ui from 'photoswipe/dist/photoswipe-ui-default';
-import store from './store';
-import { createPSWP } from './createPSWP';
-import './style.css';
+import PhotoSwipe, {Options} from "photoswipe";
+import ui from "photoswipe/dist/photoswipe-ui-default";
+import { PluginObject, VueConstructor } from "vue";
+import { createPSWP } from "./createPSWP";
+import store from "./store";
+import "./style.css";
 
 class DirectivePhotoSwipe implements PluginObject<Options> {
   private readonly pswpElement = createPSWP();
   public install(Vue: VueConstructor, globalOption: Options) {
-    Vue.directive('photoswipe', {
+    Vue.directive("photoswipe", {
       bind: (el: HTMLElement) => {
         store.init(el);
-        el.addEventListener('click', (e) => {
+        el.addEventListener("click", (e) => {
           this.click(e, el, globalOption);
         });
+      },
+      unbind: (el) => {
+        store.destroy(el);
       },
       update: (el) => {
         store.update(el);
       },
-      unbind: (el) => {
-        store.destroy(el);
-      }
     });
   }
   private click(e: Event, el: Element, globalOption: Options) {

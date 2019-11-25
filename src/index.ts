@@ -1,12 +1,12 @@
-import DirectivePhotoSwipe from './install';
+import DirectivePhotoSwipe from "./install";
 
 let GlobalVue = null;
-if (typeof window !== 'undefined') {
-	GlobalVue = (window as any).Vue;
-} else if (typeof global !== 'undefined') {
-	GlobalVue = (global as any).Vue;
+if (typeof window !== "undefined") {
+  GlobalVue = (window as any).Vue;
+} else if (typeof global !== "undefined") {
+  GlobalVue = (global as any).Vue;
 }
 if (GlobalVue) {
-	GlobalVue.use(DirectivePhotoSwipe);
+  GlobalVue.use(DirectivePhotoSwipe);
 }
 export default DirectivePhotoSwipe;
