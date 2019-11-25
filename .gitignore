@@ -59,6 +59,3 @@ typings/
 
 # next.js build output
 .next
-
-# 生成目录
-dist/

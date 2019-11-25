@@ -1,21 +1,19 @@
 {
   "name": "directive-photoswipe",
   "description": "A Vue directive for photoswipe.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "dist/directive-photoswipe.umd.js",
   "module": "dist/directive-photoswipe.esm.js",
   "unpkg": "dist/directive-photoswipe.min.js",
-  "types": "types/directive-photoswipe.d.ts",
   "author": {
     "name": "alexlees",
     "url": "https://github.com/alexlees"
   },
   "files": [
-    "src",
     "dist",
-    "test",
-    "types",
-    "build"
+    "index.d.ts",
+    "LICENSE",
+    "README.md"
   ],
   "keywords": [
     "vue-directive",
@@ -42,7 +40,7 @@
     "tslint": "^5.11.0",
     "typescript": "^3.1.3"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@types/photoswipe": "^4.0.28",
     "photoswipe": "^4.1.2",
     "vue": "^2.5.17"
