@@ -6,11 +6,13 @@
 
 > 零配置开箱即用、适合Markdown
 
-## [预览](https://github.com/alexlees/directive-photoswipe/blob/master/index.html)
+## [预览](https://alexlees.github.io/directive-photoswipe/index.html)
 
 > 请在移动端查看
 
+
 ### [demo](https://github.com/alexlees/directive-photoswipe/blob/master/index.html)
+
 
 ## 使用方式
 
